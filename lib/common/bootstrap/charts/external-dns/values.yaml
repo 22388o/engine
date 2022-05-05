@@ -95,6 +95,7 @@ publishHostIP: false
 serviceTypeFilter: []
 ## Alibaba cloud configuration to be set via arguments/env. variables
 ## These will be added to /etc/kubernetes/alibaba-cloud.json via secret
+
 ##
 alibabacloud:
   ## @param alibabacloud.accessKeyId When using the Alibaba Cloud provider, set `accessKeyId` in the Alibaba Cloud configuration file (optional)
