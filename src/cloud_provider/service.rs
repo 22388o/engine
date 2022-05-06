@@ -1371,7 +1371,7 @@ fn delete_pending_service<P>(
 where
     P: AsRef<Path>,
 {
-    match kubectl_exec_get_pods(kubernetes_config, Some(namespace), Some(selector), envs.clone()) {
+    match kubectl_exec_get_pods(&kubernetes_config, Some(namespace), Some(selector), envs.clone()) {
         Ok(pods) => {
             for pod in pods.items {
                 if pod.status.phase == KubernetesPodStatusPhase::Pending {
